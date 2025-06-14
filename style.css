@@ -1,0 +1,136 @@
+:root {
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+  --color-dark-grey: hsl(234, 12%, 34%);
+  --color-light-grey: hsl(212, 6%, 44%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-box-shadow: rgba(0, 0, 0, 0.2);
+  --border-radius: 1rem;
+  --font-serif: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 15px;
+  font-family: var(--font-serif);
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-light-grey);
+}
+
+/* Header Section */
+header {
+  width: 32rem;
+  text-align: center;
+  margin: 3rem 0rem;
+}
+
+header span {
+  font-weight: 200;
+}
+
+header h1 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+header span::after {
+  content: '\A';
+  white-space: pre;
+}
+
+/* Main Section */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Product Card */
+article {
+  width: 21rem;
+  height: 16.67rem;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 0.5rem var(--color-box-shadow);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+article p {
+  margin: 1rem 0;
+}
+
+article img {
+  display: block;
+  padding: 1rem 0rem;
+  margin-left: auto;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: var(--color-dark-grey);
+}
+
+/* Individual Cards */
+.supervisor {
+  border-top: 0.25rem solid var(--color-cyan);
+}
+
+.team-builder {
+  border-top: 0.25rem solid var(--color-red);
+}
+
+.karma {
+  border-top: 0.25rem solid var(--color-orange);
+  margin-top: 2rem;
+}
+
+.calculator {
+  border-top: 0.25rem solid var(--color-blue);
+}
+
+@media screen and (min-width: 70rem) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .first-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .second-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .third-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
